@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	fnFor();
-	fnWhile();
+	fnWhileUsingBreak();
 }
 
 func fnFor() {
@@ -13,10 +13,15 @@ func fnFor() {
 	}
 }
 
-func fnWhile() {
+func fnWhileUsingBreak() {
 	index := 0;
-	for index < 5 {
+	for true {
+		if index > 5{
+			break
+		} 
+			
+		fmt.Printf("While break index %d\n", index);
 		index++;
-		fmt.Printf("While index %d\n", index);
+
 	}
 }
